@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/*нещата с nav мърдат navigation bara в дясно и го местят елементите в него
+спрямо неговата позиция */
+.navbar{
+    display:flex; /*flex container т.е децата му ще се позиционират спрямо flexbox модела */
+    align-items:center;
+    padding: 20px;
+}
+nav{
+
+    flex: 1; /*ще заема свободното място в контейнера*/ /*flex: 1;: This property is a shorthand for flex-grow, flex-shrink, and flex-basis.*/
+    text-align:right;
+}
+nav ul{ 
+    display:inline-block;/*има текст но може да се променя width и height все едно е block*/
+    list-style-type: none; /*маха bulletpoints */
+}
+nav ul li{
+    display: inline-block;/*показва се хоризонтално*/
+    margin-right: 20px ;
+}
+/* прави текста да не е подчертан и го прави един и същи цвят за 
+всичко с "a"(anchor) тоест href-овете в index*/
+a{ 
+    text-decoration:none;
+    color:#555;
+}
+p{
+    color:#555;
+}
+.container{
+    max-width: 1300px;
+    margin:auto;
+    padding-left:25px;
+    padding-right:25px;
+}
+.logotitle{
+    font-size: 10px;
+    padding:5px;
+    font-family:'Kanit', sans-serif;
+}
+.row{
+    display:flex;
+    align-items:center;
+    flex-wrap: wrap; /* позволява flex предметите да се побират на няколко реда ако няма място на един*/
+    justify-content: space-around;/* разпределя равно празно място на всички flex itemi*/
+}
+.col-2{
+    flex-basis:40%; /*заема нужното място(процент от контейнера) преди да е раздадено свободно място*/
+    min-width: 300px;
+}
+.col-2 img{
+    max-width:100%;
+    padding:50px 0;
+}
+.col-2 h1{
+   font-size: 30px;
+}
+.btn{
+    display: inline-block;
+    background: #4ebd23;
+    color:#fff;
+    padding:8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s; /*не показва грешка а напомня че смесва 4 различни transition property-ta в едно*/
+}
+.btn:hover{
+    background:#459e22;
+}
+.header{
+    background:radial-gradient(#fff,#c8eeb9);
+}
+.header .row{
+  margin-top:70px ;
+}
+.categories{
+    margin:70px 0;
+}
+.col-3{
+    flex-basis:30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+}
+.col-3 img{
+    width:100%;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98%;
+    background: #02200380;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /*седи скрито докато не се изпълни ховера*/
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+.image-container:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+.featuretext { 
+    font-size: 1.5em;/*em зависим от фонт размера на parent елемента т.е. ако парента има 16пиксела 1.5ема ще са 1.5*15 = 24;*/
+    text-align: center;
+}
+.col-3 img[src="Images/category-2.png"]{
+    width: 300px;
+    margin-left:10px;
+    max-height: 320px;
+
+}
+.col-3 img:hover{
+    background:#154602
+}
+.small-container{
+    max-width: 1080px;
+    margin:auto;
+    padding-left: 10px;
+    padding-right:10px;
+}
+.col-4{
+    flex-basis:20%;
+    padding:10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition:transform 0.5s;
+}
+.col-4 img{
+    width: 100%;
+    height:200px;
+    object-fit: cover;
+}
+.small-container-featured{
+    max-width: 1080px;
+    margin:auto;
+    padding-left: 10px;
+    padding-right:10px;
+}
+.col-4:hover{
+    transform:translateY(-5px);/*леко повдигане при ховер*/
+}
+
+.offer {
+    position: relative;
+    padding: 50px 0;
+    border-radius: 10px;
+}
+/*.small-container-special::before{
+    content:'';
+    background:#459e22;
+    width:500px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    right:25%;
+}*/
+.offer::before { /*къде да се пуска фона и после го намествам ама не седи много добре на мобилен телефон*/
+    content: '';
+    position: absolute;
+    top: 25%;
+    right: 0%;
+    height: 50%;
+    width: 50%; 
+    background: linear-gradient(to right, #c8eeb9 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: -1; /* зеления фон да е зад текста и снимките */
+    border-radius:10px;
+}
+
+.small-container {
+    position: relative; /* седи все едно не е позициониран но може да се ползва top,left,right,bottom които местят елемента на съответната посока */
+    z-index: 1; 
+    border-radius:10px;
+    
+}
+
+.offer .row {
+    display: flex;
+    align-items: center;
+}
+
+.offer .col-2 {
+    flex: 1;
+    padding: 20px;
+}
+.header-product{
+    background-color: #62b342
+}
+.navbarproduct {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.navbarproduct .logo img {
+    display: block; /*заема цялия width на parent container-a*/
+}
+
+.navbarproduct .logotitle h1 {
+    color: white; 
+    margin-left: 10px; 
+}
+
+.navbarproduct nav ul {
+    display: flex;
+    list-style: none;
+    margin-left:45%;
+}
+
+.navbarproduct nav ul li {
+    margin-left: 20px; 
+}
+
+.navbarproduct nav ul li a {
+    color: white; 
+    text-decoration: none;
+
+}
+
+.navbarproduct img {
+    margin-left: 20px; 
+}
+.small-container-allpr{
+    max-width: 1080px;
+    margin:auto;
+    padding-left: 10px;
+    padding-right:10px;
+
+}
+.row-2{
+    justify-content: space-between;
+    margin:100px auto 50px;
+}
+select{
+    border:1px solid #c8eeb9;
+    padding: 5px;
+}
+select:focus{
+    outline: none;
+}
+.single-product{ /*голямата снимка при избирането на вариянти например (при веста както е*/
+    margin-top: 80px;
+}
+.single-product .col-2 img{
+    padding:0;
+}
+.single-product .col-2 {
+    padding: 20px;
+}
+.single-product h4{
+    margin: 20px 0;
+    font-size:22px;
+    font-weight: bold;
+}
+.single-product select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+.single-product input{
+    width:50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border:1px solid #459e22;
+}
+.small-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis: 24%;/*обявява размер преди да се раздава място*/
+    cursor:pointer;
+}

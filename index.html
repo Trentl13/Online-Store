@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang = "en"></html>
+<head>
+    <meta charset="UTF-8" />
+    <title>CaliStore</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+   <div class="header">
+    <div class="container"> <!--ползва се за обвивка на всичко и редекатиране с CSS-->
+        <div class = "navbar">
+            
+            <div class="logo">
+                <img src="images/logo.png" width="65px">
+            </div>
+            <div class="logotitle">
+                <h1>CaliStore</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contacts</a></li>
+                    <li><a href="">Account</a></li>
+                </ul>
+            </nav>
+            <img src="Images/cart.png" alt="Cart" width="30px" height="30px">
+        </div>
+        <div class="row">
+            <div class="col-2">  <!--и двата класа са с едно и също име защото трябва да имат еднакъв styling най-вече свързано с width.-->
+                <h1>Take Your Bodyweight Training<br> To The Next Level.</h1>
+                <p>Success isn't about greatness.<br> It's about consistency.</p>
+                <a href="product.html" class="btn">Explore Now</a>
+            </div>
+            <div class="col-2"> <!--ппц в някои grid системи име като col-2  показват определен размер на parent контейнера ако например има 12 колони col-2 означава, че една ще заема 2/12 от широчината на реда-->
+                <img src = "images/Andrea.png">
+            </div>
+        </div>
+    </div>
+</div>
+    <!--featured categories-->
+    <div class="categories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="image-container">
+                        <img src="Images/category-1.png" alt="Weighted Vests">
+                        <div class="overlay">
+                            <div class="featuretext">Weighted Vests</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="image-container">
+                        <img src="Images/category-2-2.png" alt="Assist Bands">
+                        <div class="overlay">
+                            <div class="featuretext">Assist Bands</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="image-container">
+                        <img src="Images/category-3.png" alt="Training Equipment">
+                        <div class="overlay">
+                            <div class="featuretext">Training Equipment</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+   <!--featured products-->
+   <div class="small-container-featured">
+    <h2 class="title">Featured Products</h2>
+    <div class="row">
+        <div class="col-4">
+            <a href = "product-detail.html">
+            <img src="images/product-vest.png" alt="Vest">
+            </a>
+            <h4>Weighted Vest 20kg</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>
+            <p>$70.00</p>
+        </div>
+        <div class="col-4">
+            <a href = "product-detail-four.html">
+                <img src="images/product-rings.png" alt="Rings">
+                </a>
+            <h4>Calisthenic Rings</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+        </div>
+        <p>$45.50</p>
+    </div>
+    <div class="col-4">
+        <a href = "product-detail-three.html">
+            <img src="images/product-paralettes.png" alt="Parallettes">
+            </a>
+            <h4>Paralettes</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+        </div>
+        <p>$40.00</p>
+    </div>
+    <div class="col-4">
+        <a href = "product-detail-two.html">
+            <img src="images/product-bands.png" alt="Bands">
+            </a>
+        <h4>Assist Bands</h4>
+        <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+    </div>
+    <p>$25.00</p>
+   </div>
+   </div>
+   <!--special offer-->
+   <div class="offer">
+    <div class="small-container-special">
+        <div class="row">
+            <div class="col-2">
+                <img src="Images/exclusive.jpg" class="offer-img">
+            </div>
+            <div class="col-2">
+                <p> Excluvely Available On CaliStore</p>
+                <h1>Sportneer Ankle Weights 10KG</h1>
+                <small>The unique feature of the Sportneer® Ankle Weights 10KG PRO 
+                    is the adjustable function.Despite the heavy weight, the size of the 
+                    weight cuffs has remained compact due to the use of weight bars.
+                 In addition, the way the weight bars are placed ensures that the 10KG ankle weights
+                  are flexible and easily form around the ankle.<br> </small>
+                  <a href = "product-detail.html"class="btn">Buy Now</a>
+            </div>
+        </div>
+    </div>
+   </div>
+   <!--testimonial-->
+   <div class="testimonial">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-3">
+                <h3>Chris Heria</h3>
+                <img src ="Images/user-1.png">
+                <p>izumitelno, chestno</p>
+                <i class ="fa fa-quote-right"></i>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </div>
+            <div class="col-3">
+                <h3>Gosho Dimitrov</h3>
+                <img src ="Images/user-1-2.png">
+                <p>Vuiiiiiiiii</p>
+                <i class ="fa fa-quote-right"></i>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+    
+</body>
+</html>
